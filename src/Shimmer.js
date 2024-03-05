@@ -4,7 +4,10 @@ const Shimmer = () => {
   return Array(10)
     .fill(0)
     .map((n, i) => (
-      <div className="w-[250px] bg-white drop-shadow-md rounded-lg m-3 p-2 border border-black">
+      <div
+        key={i}
+        className="w-[250px] bg-white drop-shadow-md rounded-lg m-3 p-2 border border-black"
+      >
         <div className="animate-pulse w-full h-48 bg-slate-200"></div>
         <div className="p-3 space-y-4">
           <div className="animate-pulse w-2/3 h-6 bg-slate-200"></div>
