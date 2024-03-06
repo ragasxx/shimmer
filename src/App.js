@@ -3,6 +3,7 @@ import Body from "./body";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import About from "./About";
 import Accordion from "./Accordion";
+import Comments from "./Comments";
 
 const App = () => {
   const [lang, setLang] = useState("en");
@@ -12,6 +13,7 @@ const App = () => {
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/accordion">Accordion</a>
+        <a href="/comments">Comments</a>
 
         <select
           className="bg-black text-white"
@@ -28,6 +30,7 @@ const App = () => {
           <Route path="/" element={<Body />}></Route>
           <Route path="/about" element={<About lang={lang} />}></Route>
           <Route path="/accordion" element={<Accordion />}></Route>
+          <Route path="/comments" element={<Comments />}></Route>
         </Routes>
       </Router>
     </>
